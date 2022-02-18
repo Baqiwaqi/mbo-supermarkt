@@ -1,0 +1,40 @@
+
+/*Function to cheack for cookies and logs in*/
+function checkCookie() {
+    var user = getCookie("user");
+    if (user !== ""){
+        getCookie(user);
+        yesCookie();
+    }else{
+        deleteCookie(user);
+        noCookie();
+    }
+}
+
+/*Delete the cookies*/
+function deleteCookie(cname){
+    document.cookie = cname + "=; expires=Mon, 19 Feb 2018 12:54:00 UTC; path=/;";
+}
+
+/*Get the cookie from storage*/
+function getCookie(cname){
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+/*Starts the logout functions*/
+function logout(){
+    checkCookie();
+    noCookie();
+}

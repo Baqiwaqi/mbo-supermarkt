@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aanmelden</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/styles2.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div id="left">
+                    <img src="images/logo.png" alt="X" id="logo">
+                </div>
+                <div class="navbar">
+                    <h2>Aanmelden</h2>
+                </div>
+                <div id="right">
+                    <a id="terug" href='javascript:history.back();'><h4>Terug</h4></a>
+                </div>
+            </div>
+            
+            <div class="content">
+                <form name="aanmeld_formulier" method="post" action="verwerken.php">
+                    <fieldset>
+                        <legend>Algemeen:</legend>
+                        Voornaam:
+                        <input type="text" name="firstname" value="" class="right" required><br>
+                        Tussenvoegsel:
+                        <input type="text" name="insertion" value="" class="right"><br>
+                        Achternaam:
+                        <input type="text" name="lastname" value="" class="right" required><br>
+                        Geboortedatum:
+                        <input type="date" name="birthdate" value="" class="right" required><br>
+                        Telefoonnummer:
+                        <input type="tel" name="phonenumber" value="" class="right" required><br>
+                        Adres:
+                        <input type="text" name="address" value="" class="right" required><br>
+                        Postcode:
+                        <input type="text" name="zipcode" value="" class="right" required><br>
+                        Woonplaats:
+                        <input type="text" name="city" value="" class="right" required><br>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Account:</legend>
+                        E-mail:
+                        <input type="email" name="email1" value="" autocomplete="off" class="right" required><br>
+                        Nogmaals e-mail:
+                        <input type="email" name="email2" value="" autocomplete="off" class="right" required><br>
+                        Wachtwoord:
+                        <input type="password" name="password1" value="" autocomplete="off" class="right" required><br>
+                        Nogmaals wachtwoord:
+                        <input type="password" name="password2" value="" autocomplete="off" class="right" required><br>
+                    </fieldset>
+                    <br>
+                    <input class="bottom" type="checkbox" name="voorwaarden" required><h5>Accepteer de algemene voorwaarden.</h5>
+                    <br>
+                    <input id="knop" class="bottom" type="submit" value="Versturen">
+                    <br>
+                </form>
+            </div>
+            
+            <div class="footer">
+                <h3>Gemaakt door Diederik Weits &copy;</h3>
+            </div>
+        </div>
+    </body>
+</html>

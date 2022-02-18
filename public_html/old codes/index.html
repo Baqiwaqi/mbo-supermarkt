@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/styles.css">
+        <script src="javascript.js"></script>
+    </head>
+    
+    <body id="body" onload="changeWidth(); checkCookie();" onresize="changeWidth()">
+        <div id="main">
+            <div class="header">
+                <div class="left">
+                    <img src="images/logo.png" alt="X" id="logo">
+                </div>
+                <div class="navbar">
+                    <div class="linkbar">
+                        <div id="selectA"></div>
+                        <a id="nav1" onclick="nav1()"><h3>Home</h3></a>
+                        <a id="nav2" onclick="nav2()"><h3>Producten</h3></a>
+                        <a id="nav3" onclick="nav3()"><h3>Winkels</h3></a>
+                        <a id="nav4" onclick="nav4()"><h3>Service</h3></a>
+                    </div>
+                    <div id="winkelwagenIconback">
+                        <img id="winkelwagenIcon" onClick="wagenOpen()" src="images/cart.png" alt="X">
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="aanmelden.html"><h4 id="aanmelden">Aanmelden</h4></a>
+                    <h4 id="klantnaam"></h4>
+                    <a onclick="loginOpen()"><h4 id="login">Inloggen</h4></a>
+                    <a onclick="logout()"><h4 id="logout">Uitloggen</h4></a>
+                </div>
+            </div>
+            <div id="productNavBack">
+                <div id="productNav">
+                    <a href="#section1"><h4>Groente, Fruit, Aardappels</h4></a>
+                    <a href="#section2"><h4>Vlees, Kip, Vis</h4></a>
+                    <a href="#section3"><h4>Kaas, Zuivel, Eieren</h4></a>
+                    <a href="#section4"><h4>Bakkerij</h4></a>
+                    <a href="#section5"><h4>Dranken</h4></a>
+                </div>
+            </div>
+            
+            <div class="content">
+                <div id="page1">
+                    <h1>Welkom!</h1>
+                    <table id="actieTable">
+                        <tr>
+                            <td><img src="images/actie1.png" alt="X" class="actie" id="actie1"></td>
+                            <td><img src="images/actie2.png" alt="X" class="actie" id="actie2"></td>
+                            <td><img src="images/actie3.png" alt="X" class="actie" id="actie3"></td>
+                            <td><img src="images/actie4.png" alt="X" class="actie" id="actie4"></td>
+                            <td><img src="images/actie5.png" alt="X" class="actie" id="actie5"></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="page2">
+                    <h1>Producten</h1>
+                    
+                </div>
+                
+                <div id="page3">
+                    <h1>Winkels</h1>
+                    <table id="winkelTable">
+                        <tr>
+                            <td class="left"><h3>Winkel te Hilversum</h3></td>
+                            <td class="right"><img src="images/winkel.png" alt="X" id="winkel"></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><h3>Winkel te Vreeland</h3></td>
+                            <td class="right"><img src="images/winkel2.png" alt="X" id="winkel"></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="page4">
+                    <h1>Service</h1>
+                    <p>
+                        Welkom op de website van Aldi Dingen. Op deze website kunt u uw boodschappen bestellen. Het is zo simpel al op 'toevoegen' te klikken als u een product ziet en het is aan uw winkelmandje toegevoegd. als u alles heeft kunt u de keuze maken of u de producten te laten bezorgen of ze bij de winkel kom ophalen op een gewenste tijd. 
+                    </p>
+                    <h3>Contact</h3>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <h3>Gemaakt door Diederik Weits &copy;</h3>
+            </div>
+        </div>
+        
+        <div id="winkelwagenBack">
+            <div id="winkelwagen">
+                <a class="wagenClose" onclick="wagenClose()">X</a>
+                <h1>Winkelmandje</h1>
+                <hr>
+                
+            </div>
+        </div>
+        
+        <div id="loginBack">
+            <div id="loginPanel">
+                <a class="wagenClose" onclick="loginClose()">X</a>
+                <h1>Login</h1>
+                <hr>
+                <form method="post" action="login.php">
+                    E-mail:
+                    <input type="text" name="email" id="right" value="" required> <br />
+                    Wachtwoord:
+                    <input type="password" name="password" id="right" value="" required><br /><br />
+                    <input type="submit" value="Inloggen" id="knop">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

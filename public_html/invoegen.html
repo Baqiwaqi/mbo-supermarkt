@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product invoegen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/styles2.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div id="left">
+                    <img src="images/logo.png" alt="X" id="logo">
+                </div>
+                <div class="navbar">
+                    <h2>Product invoegen</h2>
+                </div>
+                <div id="right">
+                    <a href='javascript:history.back();'><h4 id="terug">Terug</h4></a>
+                </div>
+            </div>
+            
+            <div class="content">
+                <form name="invoeg_formulier" method="post" action="proverwerken.php">
+                    <fieldset>
+                        <legend>Product toevoegen:</legend>
+                        Categotie: <select name="cat" class="right2">
+                            <option value="1">Groente, Fruit, Aardappel</option>
+                            <option value="2">Vlees, Kip, Vis</option>
+                            <option value="3">Kaas, Zuivel, Eieren</option>
+                            <option value="4">Bakkerij, Zoetigheid</option>
+                            <option value="5">Dranken</option>
+                        </select><br>
+                        Naam: <input type="text" name="name" value="" class="right"><br>
+                        Prijs: <input type="number" name="price" value="" step="0.01" min="0.01" max="100.00" class="right" required><br>
+                        Info: <input type="text" name="info" value="" class="right" required><br>
+                        Aantal: <input type="number" name="amount" value="" step="1" min="0" max="100" class="right" required><br>
+                    </fieldset>
+                    <br>
+                    <input id="knop" class="bottom" type="submit" value="Versturen">
+                    <br>
+                </form>
+            </div>
+            
+            <div class="footer">
+                <h3>Gemaakt door Diederik Weits &copy;</h3>
+            </div>
+        </div>
+    </body>
+</html>

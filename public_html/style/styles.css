@@ -1,0 +1,889 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    bottom: 0;
+    background-color: #eae8e4;
+    overflow-y: scroll;
+}
+
+
+#main{
+    width: 80%;
+    height: max-content;
+    margin: 0 10% 0 10%;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    transition-duration: 0.5s;
+}
+
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border-radius: 0 0 5px 5px;
+}
+
+
+.navbar{
+    position: absolute;
+    top: 80px;
+    z-index: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #f28101;
+    border-radius: 0 0 5px 5px;
+}
+.linkbar{
+    position: relative;
+    margin: 3px auto 3px auto;
+    width: 480px;
+    height: 34px;
+    background-color: #eae8e4;
+    border-radius: 5px;
+}
+#selectA{
+    position: absolute;
+    width: 120px;
+    height: 34px;
+    left: 0px;
+    background-color: #7d7564;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+.linkbar a{
+    position: relative;
+    width: 120px;
+    height: 32px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+.linkbar a:hover{
+    text-decoration: underline;
+}
+.linkbar a h3{
+    margin: 5px auto 6px auto;
+    padding: 0;
+}
+#nav1{
+    color: #ffffff;
+}
+#nav2{
+    color: #000000;
+}
+#nav3{
+    color: #000000;
+}
+#nav4{
+    color: #000000;
+}
+#winkelwagenIconback{
+    position: relative;
+    top: -40px;
+    float: right;
+    width: 36px;
+    height: 36px;
+    margin: 2px 20px 2px auto;
+    border-radius: 90%;
+    background-color: #eae8e4;
+}
+#winkelwagenIcon{
+    position: relative;
+    height: 24px;
+    width: 24px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+
+#productNavBack{
+    display: block;
+    width: 80%;
+    height: 34px;
+    margin: 5px auto 0px auto;
+    background-color: #f28101;
+    border-radius: 5px;
+}
+#productNav{
+    position: relative;
+    height: 30px;
+    top: 2px;
+    margin: 0px 20px 0px 20px;
+    background-color: #eae8e4;
+    border-radius: 5px;
+}
+#productNav a{
+    float: left;
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    margin: 5px 0 5px 0;
+    padding: 0;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+#productNav a:hover{
+    text-decoration: underline;
+}
+#productNav a h4{
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-size: 86%;
+    text-decoration: none;
+}
+
+
+#logo{
+    position: absolute;
+    z-index: 3;
+    height: 106px;
+    border: solid 2px #7d7564;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+
+#login{
+    position: relative;
+    float: right;
+    margin: 24px 30px 24px 20px;
+    padding: 6px;
+    color: #000000;
+    background-color: #f28101;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#login:hover{
+    background-color: #ff8701;
+    text-decoration: underline;
+}
+#logout{
+    position: relative;
+    float: right;
+    margin: 24px 30px 24px 20px;
+    padding: 8px;
+    color: #000000;
+    background-color: #eae8e4;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#logout:hover{
+    background-color: #f1eadc;
+    text-decoration: underline;
+}
+#aanmelden{
+    position: relative;
+    float: left;
+    margin: 24px 0 24px 20px;
+    padding: 6px;
+    color: #000000;
+    background-color: #eae8e4;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#aanmelden:hover{
+    background-color: #f1eadc;
+    text-decoration: underline;
+}
+#Cname{
+    position: relative;
+    float: left;
+    margin: 24px 0 24px 20px;
+    padding: 6px;
+    border: solid 2px #eae8e4;
+    border-radius: 3px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+#Cname:hover{
+    text-decoration: underline;
+}
+#aanmelden h4, #login h4, #logout h4, #Cname h4{
+    margin: 0;
+    padding: 0;
+}
+
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+
+#loginBack{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+#loginPanel{
+    position: relative;
+    width: 500px;
+    top: 60px;
+    margin: auto;
+    background-color: #ffffff;
+    border-top: solid 30px #f28101;
+    border-bottom: solid 30px #f28101;
+    border-radius: 5px;
+    z-index: 100;
+}
+#loginPanel h1{
+    text-align: center;
+}
+form{
+    width: 320px;
+    height: 120px;
+    margin: auto;
+    text-align: center;
+}
+#knop{
+    position: relative;
+    float: right;
+    width: 100px;
+    padding: 3px;
+    background-color: #eae8e4;
+    border: none;
+    border-radius: 3px;
+    color: #000000;
+    font-size: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+#knop:hover{
+    background-color: #f1eadc;
+}
+#knop h4{
+    margin: 0;
+    padding: 0;
+}
+#foutmelding{
+    position: fixed;
+    width: 20%;
+    top: 180px;
+    margin: 0 40% 0 40%;
+    background-color: #ffffff;
+    border-top: solid 30px #f28101;
+    border-bottom: solid 30px #f28101;
+    border-radius: 5px;
+    z-index: 200;
+    text-align: center;
+}
+
+
+.content{
+    margin: 20px;
+    text-align: center;
+}
+.content p{
+    padding: 30px;
+}
+
+
+#page1 h1, #page3 h1, #page4 h1, #page5 h1{
+    padding: 20px;
+    margin-bottom: 0;
+    border-bottom: solid 2px #eae8e4;
+}
+#page2 h1{
+    padding: 0 0 20px 0;
+    margin-bottom: 0;
+    border-bottom: solid 2px #eae8e4;
+}
+
+#actieTable{
+    height: 360px;
+    width: 100%;
+    border-bottom: solid 2px #eae8e4;
+}
+#actieTable tr{
+    margin: 0;
+    padding: 0;
+}
+#actieTable tr td{
+    display: inline-block;
+    padding: 0;
+}
+.actie{
+    position: relative;
+    height: 240px; 
+    margin: 48px 0;
+    padding: 10px;
+    border: solid 2px #eae8e4;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+#actie1:hover, #actie2:hover, #actie3:hover, #actie4:hover, #actie5:hover{
+    height: 340px;
+    padding: 0;
+    margin: 0;
+}
+
+
+#wwBack{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+#winkelwagen{
+    position: relative;
+    width: 600px;
+    max-height: 500px;
+    top: 30px;
+    margin: auto;
+    background-color: #ffffff;
+    border-top: solid 30px #f28101;
+    border-bottom: solid 30px #f28101;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+.wagenClose{
+    position: relative;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    float: right;
+    background-color: #eae8e4;
+    border-radius: 90%;
+    font-size: 150%;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+#wwDeleteForm{
+    position: relative;
+    margin: 10px;
+    width: 90px;
+    height: 30px;
+    float: left;
+}
+#wwDeleteForm input{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #eae8e4;
+    color: #000000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 100%;
+    cursor: pointer;
+    border: none;
+}
+#winkelwagen h1{
+    margin: 0;
+    padding: 10px;
+    border-bottom: solid 2px #eae8e4;
+    text-align: center;
+}
+#wwTable{
+    width: 96%;
+    margin: 2%;
+    border: solid 2px #eae8e4;
+    border-radius: 10px;
+}
+#wwTable h4, #wwTable h3, #wwBottom h4, #wwBottom h3{
+    margin: 2px;
+    padding: 0;
+}
+.wwPro{
+    display: block;
+    position: relative;
+    float: left;
+    width: 69%;
+    height: 30px;
+    border-bottom: solid 1px #eae8e4;
+}
+.wwAan{
+    display: block;
+    position: relative;
+    float: right;
+    width: 11.5%;
+    height: 30px;
+    border-bottom: solid 1px #eae8e4;
+    text-align: center;
+}
+.wwTot{
+    display: block;
+    position: relative;
+    float: right;
+    width: 11.5%;
+    height: 30px;
+    border-bottom: solid 1px #eae8e4;
+    text-align: center;
+}
+#wwBottom{
+    position: relative;
+    width: 96%;
+    margin: 10px 2%;
+    border-bottom: solid 2px #eae8e4;
+    text-align: right;
+}
+.wwBottomC{
+    position: relative;
+    width: auto;
+    margin-right: 15px;
+    float: right;
+    text-align: center;
+}
+#bestellenForm{
+    position: relative;
+    width: 50px;
+    height: 30px;
+    float: right;
+    margin: 20px;
+}
+#bestellen{
+    display: block;
+    position: relative;
+    float: right;
+    margin: 0;
+    border: none;
+    padding: 6px;
+    color: #000000;
+    background-color: #f28101;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+
+.winkelTable1{
+    float: left;
+    position: relative;
+    width: 30%;
+}
+.winkelTable1 tr{
+    border: solid 2px #eae8e4;
+    border-radius: 10px;
+}
+.winkelTable1 tr td{
+    width: 48%
+}
+.winkelTable1 tr td h4{
+    margin: 1px;
+    padding: 1px;
+}
+.winkelTable2 tr{
+    border: solid 2px #eae8e4;
+    border-radius: 10px;
+}
+.winkelTable2 tr td{
+    width: 48%
+}
+.winkelTable2 tr td h4{
+    margin: 1px;
+    padding: 1px;
+}
+.winkelTable3{
+    float: right;
+    position: relative;
+    width: 30%;
+}
+.winkelImgBorder{
+    position: relative;
+    margin-right: 100px;
+    margin-top: 0;
+    height: 200px;
+    border: solid 2px #eae8e4;
+    border-radius: 5px;
+    float: left;
+}
+.winkelImg{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.productTable{
+    width: 90%;
+    margin: 0 5% 0 5%;
+    overflow-x: auto;
+}
+.productTitle{
+    background-color: #f28101;
+    border-radius: 5px;
+    padding: 3px;
+}
+.productTable tr td{
+    display: inline-block;
+    min-width: 110px;
+    max-width: 15%;
+    height: auto;
+    border: solid 2px #eae8e4;
+    border-radius: 10px;
+    text-align: center;
+}
+.productTable tr td:hover{
+    border-color: #7d7564;
+}
+.productTable tr td img{
+    position: relative;
+    width: 90%;
+    border-radius: 5px;
+}
+.productTable tr td h3{
+    width: 100%;
+    margin: 2px;
+    padding: 0;
+    font-size: 100%;
+}
+#productInfoText{
+    position: relative;
+    width: 98%;
+    margin: 1%;
+    padding: 0;
+    text-align: left;
+}
+#productPriceText{
+    position: relative;
+    width: auto;
+    margin: 1% 5% 1% 50%;
+    padding: 2px;
+    font-size: 120%;
+    text-align: right;
+    border: solid 2px #eae8e4;
+    border-radius: 5px;
+}
+.productTable tr td form{
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: 2%;
+}
+.productAantal{
+    position: relative;
+    width: 35%;
+    margin-right: 1%;
+}
+.productButton{
+    position: relative;
+    width: 55%;
+    border-radius: 2px;
+}
+
+
+#productCountDiv{
+    position: relative;
+    height: auto;
+    margin: auto;
+}
+#productCountTable{
+    display: inline-table;
+    position: relative;
+    width: 200px;
+    height: auto;
+    margin: auto;
+    border: solid 2px #7d7564;
+    border-collapse: collapse;
+}
+#productCountTable tr td{
+    border: solid 2px #eae8e4;
+    border-bottom: solid 2px #000000;
+    border-top: solid 2px #000000;
+}
+#productCountTable .PCT_left{
+    padding-right: 5px;
+    text-align: right;
+}
+#productCountTable .PCT_right{
+    padding-left: 5px;
+    width: 50px;
+    text-align: left;
+}
+
+
+#gegevensTable{
+    position: relative;
+    width: 600px;
+    height: auto;
+    margin: auto;
+    border: solid 2px #7d7564;
+    border-collapse: collapse;
+}
+#gegevensTable tr td{
+    position: relative;
+    border: solid 2px #eae8e4;
+    border-bottom: solid 2px #000000;
+    border-top: solid 2px #000000;
+}
+#aanpassen{
+    position: absolute;
+    right: 12%;
+    top: 240px;
+    margin: 0;
+    padding: 8px;
+    color: #000000;
+    background-color: #eae8e4;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#aanpassen:hover{
+    background-color: #f1eadc;
+    text-decoration: underline;
+}
+#aanpassen h4{
+    margin: 0;
+    padding: 0;
+}
+.gegevensTitle{
+    width: 30%;
+    text-align: right;
+    padding-right: 5px;
+}
+.gegevensText{
+    text-align: left;
+    padding-left: 10px;
+}
+
+#besteldTable{
+    position: relative;
+    width: 600px;
+    height: auto;
+    margin: auto;
+    border: solid 2px #7d7564;
+    border-collapse: collapse;
+}
+#besteldTable tr td{
+    position: relative;
+    border: solid 2px #eae8e4;
+    border-bottom: solid 2px #000000;
+    border-top: solid 2px #000000;
+}
+#besteldTable h4{
+    margin: 0;
+    padding: 0;
+}
+.besteldLeft{
+    width: 35%;
+    text-align: center;
+    padding-right: 5px;
+}
+.besteldCenter{
+    width: 15%;
+    text-align: center;
+}
+.besteldRight{
+    width: 35%;
+    text-align: center;
+    padding-left: 10px;
+}
+.besteldKnop{
+    width: 5%;
+}
+.besteldKnop form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#besteldKnopId{
+    padding: 1px 4px;
+    color: #000000;
+    background-color: #eae8e4;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#page5 form{
+    width: 480px;
+    height: auto;
+    margin: auto;
+    text-align: right;
+}
+#page5 form fieldset{
+    border-radius: 5px;
+    font-size: 120%;
+}
+.invoegInput{
+    position: relative;
+    width: 210px;
+    height: 16px;
+    margin: 2px 30px 2px 0;
+}
+.invoegInput2{
+    position: relative;
+    width: 216px;
+    height: 24px;
+    margin: 2px 30px 2px 0;
+} 
+.invoegInput3{
+    position: relative;
+    width: 13px;
+    height: 13px;
+    margin: 2px 234px 2px 0;
+}
+#page5 #knop{
+    float: right;
+    text-align: center;
+}
+
+
+#contactForm{
+    width: 400px; 
+    height: auto;
+}
+#contactForm textArea{
+    position: relative;
+    width: 100%;
+}
+
+
+.footer{
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #f28101;
+    text-align: center;
+    padding: 6px 0 6px 0;
+    border-radius: 5px 5px 0px 0px;
+}
+.footer h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+}
+
+@media only screen and (max-width: 1333px){
+    #logo{
+        height: 76px;
+    }
+    #productNavBack{
+        width: 98%;
+    }
+    .winkelImgBorder{
+        margin-top: 20px;
+        margin-right: 10px;
+        height: 150px;
+    }
+    #actie1:hover, #actie2:hover, #actie3:hover, #actie4:hover, #actie5:hover{
+        height: 240px; 
+        padding: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 1080px){
+    #productNav{
+        height: 190px;
+        width: auto;
+    }
+    #productNavBack{
+        height: 194px;
+    }
+    #productNav a{
+        width: 100%;
+    }
+    .winkelImgBorder{
+        display: none;
+    }
+    .winkelTable1{
+        width: 50%;
+    }
+    #gegevensTable{
+        width: 90%;
+    }
+    
+    .productTable tr td{
+        max-width: 30%;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .linkbar a{
+        transition-duration: 0s;
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .navbar{
+        height: 136px;
+    }
+    .linkbar{
+        height: 130px;
+        width: auto;
+        margin-right: 42px;
+        margin-left: 42px;
+    }
+    #selectA{
+        display: none;
+    }
+    .linkbar a{
+        width: 100%;
+    }
+    #nav1{
+        color: #000000;
+    }
+    #nav2{
+        color: #000000;
+    }
+    #nav3{
+        color: #000000;
+    }
+    #nav4{
+        color: #000000;
+    }
+    #productNavBack{
+        margin-top: 130px;
+    }
+    #winkelwagenIconback{
+        margin-right: 2px;
+    }
+}
+
+@media only screen and (max-width: 530px){
+    #main{
+        width: 100%;
+        margin: 0;
+    }
+    #logo{
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    #login{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    #logout{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    #aanmelden{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    #Cname{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
